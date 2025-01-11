@@ -21,7 +21,7 @@ if (WIN32)
     )
 endif()
 if (APPLE)
-    target_link_libraries(FFGLTouchEngine
+    target_link_libraries(FFGLTouchEngine PUBLIC
     "-framework TouchEngine"
     "-framework Foundation"
     "-framework QuartzCore"
