@@ -59,10 +59,10 @@ FFGLTouchEngine::FFGLTouchEngine()
 FFGLTouchEngine::~FFGLTouchEngine()
 {
 #ifdef __APPLE__
-	if (pDevice != nullptr) {
-		pDevice->release();
-		pDevice = nullptr;
-	}
+//	if (pDevice != nullptr) {
+//		pDevice->release();
+//		pDevice = nullptr;
+//	}
 #endif
 }
 
@@ -75,7 +75,7 @@ FFResult FFGLTouchEngine::InitGL(const FFGLViewportStruct* vp)
 	}
 
 #ifdef __APPLE__
-    pDevice = MTL::CreateSystemDefaultDevice();
+//    pDevice = MTL::CreateSystemDefaultDevice();
 #endif
 
 	//Load TouchEngine
@@ -292,10 +292,10 @@ FFResult FFGLTouchEngine::DeInitGL()
 	}
 #endif
 #ifdef __APPLE__
-    if (pDevice != nullptr) {
-        pDevice->release();
-        pDevice = nullptr;
-    }
+//    if (pDevice != nullptr) {
+//        pDevice->release();
+//        pDevice = nullptr;
+//    }
 #endif
 
 	// Deinitialize the quad

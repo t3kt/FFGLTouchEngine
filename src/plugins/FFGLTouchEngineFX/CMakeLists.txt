@@ -33,6 +33,11 @@ if (APPLE)
     target_include_directories(FFGLTouchEngineFX PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/../../lib/metal-cpp
     )
+    set_source_files_properties(
+        TouchEngineFX.cpp
+        PROPERTIES
+        LANGUAGE OBJCXX
+    )
 endif()
 target_include_directories(FFGLTouchEngineFX PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../../include>
